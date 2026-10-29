@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #eaf2fb;
+    text-align: center;
+    margin: 0;
+}
+
+.contenedor {
+    background: white;
+    width: 350px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.contenedor.ancho {
+    width: 820px;
+    max-width: 92%;
+    text-align: left;
+}
+
+h2 { color: #004494; }
+
+.logo {
+    width: 160px;
+    height: auto;
+    margin: 10px 0;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    color: #555;
+    margin-top: 8px;
+    text-align: left;
+}
+
+.contenedor:not(.ancho) label { text-align: center; }
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 6px 0;
+    box-sizing: border-box;
+}
+
+.ancho input { width: 100%; }
+
+button {
+    padding: 10px 20px;
+    background: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover { background: #005fa3; }
+
+button.secundario {
+    background: white;
+    color: #222;
+    border: 1px solid #888;
+}
+
+button.secundario:hover { background: #eee; }
+
+.oculto { display: none; }
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.columnas { display: flex; gap: 20px; }
+.izquierda, .derecha { flex: 1; }
+
+.fila { display: flex; gap: 10px; margin-top: 8px; }
+.fila > * { flex: 1; }
+
+#resultado {
+    border: 1px dashed #999;
+    padding: 12px;
+    min-height: 70px;
+    margin-top: 6px;
+    font-weight: bold;
+}
+
+#cajaFoto {
+    border: 1px dashed #999;
+    min-height: 150px;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    overflow: hidden;
+}
+
+#cajaFoto video, #cajaFoto img { width: 100%; }
+
+.cajaGrafica {
+    border: 1px dashed #999;
+    padding: 10px;
+    margin-top: 6px;
+    height: 260px;
+}
+
+#mensaje { color: red; font-weight: bold; }
+
+.ok { color: #1a7f37; }
+.alto { color: #c0392b; }
+
+@media (max-width: 700px) {
+    .columnas { flex-direction: column; }
+}
